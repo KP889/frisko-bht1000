@@ -2,8 +2,9 @@ from __future__ import annotations
 from typing import Any
 import voluptuous as vol
 from homeassistant import config_entries
-from homeassistant.const import CONF_BAUDRATE, CONF_NAME, CONF_PORT
-from homeassistant.data_entry_flow import FlowResult
+from homeassistant.const import CONF_NAME, CONF_PORT
+CONF_BAUDRATE = "baudrate"
+from homeassistant.config_entries import ConfigFlowResult
 from .const import CONF_DEVICES, CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL, DOMAIN
 
 CONF_BYTESIZE = "bytesize"
