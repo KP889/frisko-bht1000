@@ -1,11 +1,11 @@
 {
   "domain": "frisko_bht1000",
   "name": "Frisko BHT-1000",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "config_flow": true,
   "documentation": "https://github.com/KP889/frisko-bht1000",
   "issue_tracker": "https://github.com/KP889/frisko-bht1000/issues",
-  "codeowners": [],
+  "codeowners": ["@KP889"],
   "dependencies": [],
   "requirements": [
     "pymodbus>=3.6.0,<4.0.0"
