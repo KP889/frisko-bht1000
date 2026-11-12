@@ -20,7 +20,9 @@ class FriskoConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         self._hub: dict[str, Any] = {}
         self._devices: list[dict[str, Any]] = []
 
-    async def async_step_user(self, user_input=None) -> FlowResult:
+    async def async_step_user(
+        self,
+        user_input=None) -> ConfigFlowResult:
         errors = {}
         if user_input is not None:
             await self.async_set_unique_id(user_input[CONF_PORT])
@@ -38,7 +40,7 @@ class FriskoConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         })
         return self.async_show_form(step_id="user", data_schema=schema, errors=errors)
 
-    async def async_step_device(self, user_input=None) -> FlowResult:
+    async def async_step_device(self, user_input=None) -> ConfigFlowResult:
         errors = {}
         if user_input is not None:
             slave = int(user_input[CONF_SLAVE])
